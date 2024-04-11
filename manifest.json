@@ -1,0 +1,55 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "Cupertino",
+    "theme": {
+        "colors": {
+            "frame": "rgb(236, 236, 236)",
+            "toolbar": "rgb(249, 249, 249)",
+            "toolbar_text": "rgb(74, 74, 74)",
+            "toolbar_field_text": "rgb(74, 74, 74)",
+            "toolbar_top_separator": "rgb(195, 192, 190)",
+            "toolbar_bottom_separator": "rgb(195, 192, 190)",
+            "tab_text": "rgb(74, 74, 74)",
+            "tab_line": "rgb(249, 249, 249)",
+            "tab_background_text": "rgb(74, 74, 74)",
+            "tab_background_text_inactive": "rgb(190, 190, 190)",
+            "ntp_text": "rgb(74, 74, 74)",
+            "ntp_link": "rgb(44, 146, 251)",
+            "ntp_section": "rgb(234, 234, 234)",
+            "sidebar": "rgb(249, 249, 249)",
+            "sidebar_text": "rgb(74, 74, 74)",
+            "sidebar_border": "rgb(195, 192, 190)",
+            "popup": "rgb(234, 234, 234)",
+            "popup_text": "rgb(74, 74, 74)",
+            "popup_highlight": "rgb(44, 146, 251)",
+            "popup_border": "rgb(195, 192, 190)",
+            "toolbar_field": "rgb(236, 236, 236)"
+        }
+    },
+    "dark_theme": {
+        "colors": {
+            "frame": "rgb(41, 41, 41)",
+            "toolbar": "rgb(74, 74, 74)",
+            "toolbar_text": "rgb(202, 202, 202)",
+            "toolbar_field_text": "rgb(255, 255, 255)",
+            "toolbar_top_separator": "rgb(0, 0, 0)",
+            "toolbar_bottom_separator": "rgb(0, 0, 0)",
+            "tab_text": "rgb(255, 255, 255)",
+            "tab_line": "rgb(41, 41, 41)",
+            "tab_background_text": "rgb(160, 160, 160)",
+            "tab_background_text_inactive": "rgb(190, 190, 190)",
+            "ntp_text": "rgb(255, 255, 255)",
+            "ntp_link": "rgb(44, 146, 251)",
+            "ntp_section": "rgb(234, 234, 234)",
+            "sidebar": "rgb(74, 74, 74)",
+            "sidebar_text": "rgb(255, 255, 255)",
+            "sidebar_border": "rgb(0, 0, 0)",
+            "popup": "rgb(234, 234, 234)",
+            "popup_text": "rgb(255, 255, 255)",
+            "popup_highlight": "rgb(44, 146, 251)",
+            "popup_border": "rgb(0, 0, 0)",
+            "toolbar_field": "rgb(41, 41, 41)"
+        }
+    }
+}
