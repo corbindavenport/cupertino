@@ -1,5 +1,11 @@
-# Cupertino (WIP)
+# Cupertino
 
-This is a Firefox theme that closely matches the color scheme of macOS Sonoma 14, providing a slightly more native feel for Firefox on Mac. It supports both light and dark mode, and there is an additional orange variant.
+Cupertino is a theme for the Mozilla Firefox browser designed to match the macOS color scheme and design. It provides a slightly more native look and feel for Firefox on Mac computers, inspired by the design of Apple Safari, and it supports both light and dark modes.
 
-(links coming soon)
+[**Download for Firefox**](https://addons.mozilla.org/en-US/firefox/addon/cupertino-theme/)
+
+![Screenshot in light mode](screen_light.png)
+
+![Screenshot in dark mode](screen_dark.png)
+
+The developers of this theme are not associated with Mozilla or Apple, inc.
