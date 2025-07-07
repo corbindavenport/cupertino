@@ -1,69 +1,47 @@
 {
     "manifest_version": 2,
-    "version": "1.0",
+    "version": "2.0",
     "name": "Cupertino: Unofficial macOS theme for Firefox",
-	"short_name": "Cupertino",
+    "short_name": "Cupertino",
     "author": "Corbin Davenport",
-	"description": "A Firefox theme designed to match the macOS color scheme and design.",
-	"homepage_url": "https://github.com/corbindavenport/cupertino",
+    "description": "A Firefox theme designed to match the macOS color scheme and design.",
+    "homepage_url": "https://github.com/corbindavenport/cupertino",
     "icons": {
-		"32": "img/icon_x32.png",
-		"48": "img/icon_x48.png",
-		"128": "img/icon_x128.png"
-	},
+        "32": "img/icon_x32.png",
+        "48": "img/icon_x48.png",
+        "128": "img/icon_x128.png"
+    },
     "theme": {
+        "images": {
+            "theme_ntp_background" : "img/icon_x128.png"
+        },
         "colors": {
-            "frame": "rgb(236, 236, 236)",
-            "frame_inactive": "rgb(223, 223, 223)",
-            "toolbar": "rgb(249, 249, 249)",
-            "toolbar_field": "rgb(249, 249, 249)",
-            "toolbar_field_border": "rgb(195, 192, 190)",
+            "frame": "rgb(250, 250, 250)",
+            "frame_inactive": "rgb(250, 250, 250)",
+            "toolbar": "rgb(250, 250, 250)",
+            "toolbar_field": "rgb(250, 250, 250)",
+            "toolbar_field_border": "rgb(220, 220, 220)",
             "toolbar_text": "rgb(74, 74, 74)",
             "toolbar_field_text": "rgb(74, 74, 74)",
-            "toolbar_top_separator": "rgb(195, 192, 190)",
-            "toolbar_bottom_separator": "rgb(195, 192, 190)",
-            "tab_text": "rgb(74, 74, 74)",
-            "tab_line": "rgb(249, 249, 249)",
+            "toolbar_top_separator": "rgb(250, 250, 250)",
+            "toolbar_bottom_separator": "rgb(230, 230, 230)",
+            "tab_selected": "rgb(231, 223, 255)",
+            "tab_text": "rgb(39, 35, 20)",
+            "tab_line": "rgb(231, 223, 255)",
             "tab_background_text": "rgb(74, 74, 74)",
             "tab_background_text_inactive": "rgb(190, 190, 190)",
-            "ntp_text": "rgb(74, 74, 74)",
-            "ntp_link": "rgb(44, 146, 251)",
-            "ntp_section": "rgb(234, 234, 234)",
-            "sidebar": "rgb(232, 232, 232)",
+            "sidebar": "rgb(246, 246, 246)",
             "sidebar_text": "rgb(74, 74, 74)",
-            "sidebar_border": "rgb(232, 232, 232)",
-            "popup": "rgb(234, 234, 234)",
+            "sidebar_border": "rgb(246, 246, 246)",
+            "popup": "rgb(250, 250, 250)",
             "popup_text": "rgb(74, 74, 74)",
             "popup_highlight": "rgb(44, 146, 251)",
-            "popup_border": "rgb(195, 192, 190)"
+            "popup_border": "rgb(195, 192, 190)",
+            "button_background_hover": "rgb(231, 231, 231)",
+            "button_background_active": "rgb(218, 218, 218)"
         }
     },
     "dark_theme": {
-        "colors": {
-            "frame": "rgba(41, 41, 41)",
-            "frame_inactive": "rgb(30, 30, 30)",
-            "toolbar": "rgb(74, 74, 74)",
-            "toolbar_inactive": "rgb(52, 52, 52)",
-            "toolbar_field": "rgb(74, 74, 74)",
-            "toolbar_field_border": "rgb(85, 85, 85)",
-            "toolbar_text": "rgb(202, 202, 202)",
-            "toolbar_field_text": "rgb(255, 255, 255)",
-            "toolbar_top_separator": "rgb(0, 0, 0)",
-            "toolbar_bottom_separator": "rgb(0, 0, 0)",
-            "tab_text": "rgb(255, 255, 255)",
-            "tab_line": "rgb(41, 41, 41)",
-            "tab_background_text": "rgb(160, 160, 160)",
-            "tab_background_text_inactive": "rgb(190, 190, 190)",
-            "ntp_text": "rgb(255, 255, 255)",
-            "ntp_link": "rgb(44, 146, 251)",
-            "ntp_section": "rgb(47, 47, 47)",
-            "sidebar": "rgb(44, 44, 44)",
-            "sidebar_text": "rgb(255, 255, 255)",
-            "sidebar_border": "rgb(44, 44, 44)",
-            "popup": "rgb(47, 47, 47)",
-            "popup_text": "rgb(255, 255, 255)",
-            "popup_highlight": "rgb(44, 146, 251)",
-            "popup_border": "rgb(0, 0, 0)"
-        }
+        "colors": {}
     }
 }
