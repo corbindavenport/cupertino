@@ -14,24 +14,24 @@
     "theme": {
         "images": {
             "additional_backgrounds": [
-                "img/light_frame_right.png",
-                "img/light_frame_left.png",
-                "img/light_frame_center.png"
+                "img/light_frame_right.svg",
+                "img/light_frame_left.svg",
+                "img/light_frame_center.svg"
             ]
         },
         "properties": {
             "additional_backgrounds_alignment": [
                 "right top",
                 "left top",
-                "top"
+                "center top"
             ],
             "additional_backgrounds_tiling": [ "no-repeat", "no-repeat", "repeat"  ]
         },
         "colors": {
             "frame": "rgb(250, 250, 250)",
             "frame_inactive": "rgb(250, 250, 250)",
-            "toolbar_field": "rgb(250, 250, 250)",
-            "toolbar_field_border": "#d9bfff",
+            "toolbar_field": "rgb(250, 250, 250, 50%)",
+            "toolbar_field_border": "#e7dafd",
             "toolbar_text": "rgb(74, 74, 74)",
             "toolbar_field_text": "rgb(74, 74, 74)",
             "toolbar_top_separator": "rgb(250, 250, 250)",
@@ -49,7 +49,8 @@
             "popup_highlight": "rgb(44, 146, 251)",
             "popup_border": "rgb(195, 192, 190)",
             "button_background_hover": "#d9bfff",
-            "button_background_active": "#cb9eff"
+            "button_background_active": "#cb9eff",
+            "ntp_background": "rgb(250, 250, 250)"
         }
     },
     "dark_theme": {
