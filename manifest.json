@@ -13,21 +13,32 @@
     },
     "theme": {
         "images": {
-            "theme_ntp_background" : "img/icon_x128.png"
+            "additional_backgrounds": [
+                "img/light_frame_right.png",
+                "img/light_frame_left.png",
+                "img/light_frame_center.png"
+            ]
+        },
+        "properties": {
+            "additional_backgrounds_alignment": [
+                "right top",
+                "left top",
+                "top"
+            ],
+            "additional_backgrounds_tiling": [ "no-repeat", "no-repeat", "repeat"  ]
         },
         "colors": {
             "frame": "rgb(250, 250, 250)",
             "frame_inactive": "rgb(250, 250, 250)",
-            "toolbar": "rgb(250, 250, 250)",
             "toolbar_field": "rgb(250, 250, 250)",
-            "toolbar_field_border": "rgb(220, 220, 220)",
+            "toolbar_field_border": "#d9bfff",
             "toolbar_text": "rgb(74, 74, 74)",
             "toolbar_field_text": "rgb(74, 74, 74)",
             "toolbar_top_separator": "rgb(250, 250, 250)",
-            "toolbar_bottom_separator": "rgb(230, 230, 230)",
-            "tab_selected": "rgb(231, 223, 255)",
+            "toolbar_bottom_separator": "rgb(250, 250, 250)",
+            "tab_selected": "rgb(220, 220, 220)",
             "tab_text": "rgb(39, 35, 20)",
-            "tab_line": "rgb(231, 223, 255)",
+            "tab_line": "rgb(220, 220, 220)",
             "tab_background_text": "rgb(74, 74, 74)",
             "tab_background_text_inactive": "rgb(190, 190, 190)",
             "sidebar": "rgb(246, 246, 246)",
@@ -37,8 +48,8 @@
             "popup_text": "rgb(74, 74, 74)",
             "popup_highlight": "rgb(44, 146, 251)",
             "popup_border": "rgb(195, 192, 190)",
-            "button_background_hover": "rgb(231, 231, 231)",
-            "button_background_active": "rgb(218, 218, 218)"
+            "button_background_hover": "#d9bfff",
+            "button_background_active": "#cb9eff"
         }
     },
     "dark_theme": {
