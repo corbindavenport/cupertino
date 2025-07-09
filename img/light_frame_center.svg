@@ -13,17 +13,6 @@
   <defs
      id="defs1">
     <linearGradient
-       id="linearGradient14">
-      <stop
-         style="stop-color:#d9bfff;stop-opacity:0.98039216;"
-         offset="0"
-         id="stop14" />
-      <stop
-         style="stop-color:#cb9eff;stop-opacity:1;"
-         offset="1"
-         id="stop13" />
-    </linearGradient>
-    <linearGradient
        id="linearGradient1">
       <stop
          style="stop-color:#cb9eff;stop-opacity:1;"
@@ -43,16 +32,43 @@
        y2="65.197884"
        gradientUnits="userSpaceOnUse"
        spreadMethod="pad" />
-    <linearGradient
-       xlink:href="#linearGradient14"
-       id="linearGradient9"
-       x1="71.145836"
-       y1="60.700001"
-       x2="71.145836"
-       y2="69.695831"
-       gradientUnits="userSpaceOnUse"
-       spreadMethod="repeat"
-       gradientTransform="matrix(1.0001484,0,0,1.0612634,-0.01057093,-3.9942722)" />
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter32"
+       x="-0.011105536"
+       y="-0.15083354"
+       width="1.0222111"
+       height="1.3016671">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         id="feFlood31" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="0.600000"
+         id="feGaussianBlur31" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="0.000000"
+         dy="0.000000"
+         id="feOffset31" />
+      <feComposite
+         result="comp1"
+         operator="in"
+         in="flood"
+         in2="offset"
+         id="feComposite31" />
+      <feComposite
+         result="comp2"
+         operator="over"
+         in="SourceGraphic"
+         in2="comp1"
+         id="feComposite32" />
+    </filter>
   </defs>
   <g
      id="layer2"
@@ -70,12 +86,13 @@
      transform="translate(-84.374999,-48)"
      style="fill:url(#linearGradient2);fill-opacity:1">
     <rect
-       style="mix-blend-mode:normal;fill:url(#linearGradient9);fill-rule:nonzero;stroke:#e7dfff;stroke-width:0.543995;stroke-dasharray:none;stroke-opacity:1"
+       style="mix-blend-mode:normal;fill:#f8e5d3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter32)"
        id="rect1"
        width="129.66507"
        height="9.5469484"
        x="6.3132844"
        y="60.424416"
-       ry="4.7734742" />
+       ry="4.7734742"
+       transform="matrix(1.000245,0,0,0.96704474,-0.01743333,1.9755173)" />
   </g>
 </svg>
