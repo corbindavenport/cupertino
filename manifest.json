@@ -82,7 +82,9 @@
             "popup_border": "rgb(91, 91, 91)",
             "button_background_hover": "rgb(124, 21, 4)",
             "button_background_active": "rgb(158, 40, 11)",
-            "ntp_background": "rgb(30, 30, 30)"
+            "ntp_background": "rgb(38, 54, 57)",
+            "ntp_card_background": "rgb(152, 152, 157)",
+            "ntp_text": "rgb(255, 255, 255)"
         }
     }
 }
