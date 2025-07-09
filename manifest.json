@@ -54,6 +54,34 @@
         }
     },
     "dark_theme": {
-        "colors": {}
+         "images": {
+            "additional_backgrounds": [ ]
+        },
+        "colors": {
+            "frame": "rgb(30, 30, 30)",
+            "frame_inactive": "rgb(30, 30, 30)",
+            "toolbar": "rgb(30, 30, 30)",
+            "toolbar_field": "rgb(30, 30, 30, 50%)",
+            "toolbar_field_border": "rgb(37, 37, 37)",
+            "toolbar_text": "rgb(255, 255, 255)",
+            "toolbar_field_text": "rgb(255, 255, 255)",
+            "toolbar_top_separator": "rgb(30, 30, 30)",
+            "toolbar_bottom_separator": "rgb(30, 30, 30)",
+            "tab_selected": "rgb(47, 47, 47)",
+            "tab_text": "rgb(255, 255, 255)",
+            "tab_line": "rgb(30, 30, 30)",
+            "tab_background_text": "rgb(234, 234, 234)",
+            "tab_background_text_inactive": "rgb(234, 234, 234)",
+            "sidebar": "rgb(37, 37, 37)",
+            "sidebar_text": "rgb(255, 255, 255)",
+            "sidebar_border": "rgb(30, 30, 30)",
+            "popup": "rgb(37, 37, 37)",
+            "popup_text":  "rgb(255, 255, 255)",
+            "popup_highlight": "rgb(44, 146, 251)",
+            "popup_border": "rgb(91, 91, 91)",
+            "button_background_hover": "rgb(124, 21, 4)",
+            "button_background_active": "rgb(158, 40, 11)",
+            "ntp_background": "rgb(30, 30, 30)"
+        }
     }
 }
