@@ -7,7 +7,7 @@
    viewBox="0 0 132.29167 52.916667"
    version="1.1"
    id="svg1"
-   inkscape:export-filename="img/light_frame_center.svg"
+   inkscape:export-filename="img/light_frame_left.svg"
    inkscape:export-xdpi="25.4"
    inkscape:export-ydpi="25.4"
    inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:export-bgcolor="#0ed70000"
-     inkscape:zoom="2.6124036"
-     inkscape:cx="166.89611"
-     inkscape:cy="55.887229"
+     inkscape:zoom="1.4453692"
+     inkscape:cx="231.08282"
+     inkscape:cy="103.77971"
      inkscape:window-width="1512"
      inkscape:window-height="857"
      inkscape:window-x="0"
@@ -450,34 +450,119 @@
          in2="comp1"
          id="feComposite32" />
     </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter8"
+       x="-0.0055514077"
+       y="-0.080037057"
+       width="1.0111028"
+       height="1.1600741">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         id="feFlood7" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="0.300000"
+         id="feGaussianBlur7" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="0.000000"
+         dy="0.000000"
+         id="feOffset7" />
+      <feComposite
+         result="comp1"
+         operator="in"
+         in="flood"
+         in2="offset"
+         id="feComposite7" />
+      <feComposite
+         result="comp2"
+         operator="over"
+         in="SourceGraphic"
+         in2="comp1"
+         id="feComposite8" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter8-6"
+       x="-0.0055514077"
+       y="-0.080037057"
+       width="1.0111028"
+       height="1.1600741">
+      <feFlood
+         result="flood"
+         in="SourceGraphic"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         id="feFlood7-0" />
+      <feGaussianBlur
+         result="blur"
+         in="SourceGraphic"
+         stdDeviation="0.300000"
+         id="feGaussianBlur7-0" />
+      <feOffset
+         result="offset"
+         in="blur"
+         dx="0.000000"
+         dy="0.000000"
+         id="feOffset7-9" />
+      <feComposite
+         result="comp1"
+         operator="in"
+         in="flood"
+         in2="offset"
+         id="feComposite7-5" />
+      <feComposite
+         result="comp2"
+         operator="over"
+         in="SourceGraphic"
+         in2="comp1"
+         id="feComposite8-6" />
+    </filter>
   </defs>
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Background">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.499017;stroke-dasharray:none"
+       style="fill:#e9e9e9;fill-opacity:1;stroke:none;stroke-width:0.499017;stroke-dasharray:none"
        id="rect2"
        width="132.29167"
        height="52.916668"
        x="0"
-       y="0" />
+       y="0"
+       inkscape:label="Main background" />
+    <rect
+       style="fill:#f2f2f2;fill-opacity:1;stroke-width:0.895545"
+       id="rect3"
+       width="132.29167"
+       height="11.773958"
+       x="2.7755576e-17"
+       y="-3.8327183e-08"
+       inkscape:label="Tabs background" />
   </g>
   <g
-     inkscape:label="Toolbar"
+     inkscape:label="Toolbars"
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-4.9999999,-48)"
      style="fill:url(#linearGradient2);fill-opacity:1">
     <rect
-       style="mix-blend-mode:normal;fill:#f8e5d3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter32)"
+       style="mix-blend-mode:normal;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.256864;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter8)"
        id="rect1"
-       width="129.66507"
-       height="9.5469484"
-       x="6.3132844"
-       y="60.424416"
+       width="129.69684"
+       height="8.9958334"
+       x="6.2973976"
+       y="60.700001"
        sodipodi:type="rect"
-       ry="4.7734742"
-       transform="matrix(1.000245,0,0,0.96704474,-0.01743333,1.9755173)" />
+       ry="4.4979167"
+       inkscape:label="Toolbar" />
   </g>
 </svg>

@@ -34,64 +34,70 @@
        spreadMethod="pad" />
     <filter
        style="color-interpolation-filters:sRGB"
-       id="filter32"
-       x="-0.011105536"
-       y="-0.15083354"
-       width="1.0222111"
-       height="1.3016671">
+       id="filter8"
+       x="-0.0055514077"
+       y="-0.080037057"
+       width="1.0111028"
+       height="1.1600741">
       <feFlood
          result="flood"
          in="SourceGraphic"
          flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
-         id="feFlood31" />
+         id="feFlood7" />
       <feGaussianBlur
          result="blur"
          in="SourceGraphic"
-         stdDeviation="0.600000"
-         id="feGaussianBlur31" />
+         stdDeviation="0.300000"
+         id="feGaussianBlur7" />
       <feOffset
          result="offset"
          in="blur"
          dx="0.000000"
          dy="0.000000"
-         id="feOffset31" />
+         id="feOffset7" />
       <feComposite
          result="comp1"
          operator="in"
          in="flood"
          in2="offset"
-         id="feComposite31" />
+         id="feComposite7" />
       <feComposite
          result="comp2"
          operator="over"
          in="SourceGraphic"
          in2="comp1"
-         id="feComposite32" />
+         id="feComposite8" />
     </filter>
   </defs>
   <g
      id="layer2">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.499017;stroke-dasharray:none"
+       style="fill:#e9e9e9;fill-opacity:1;stroke:none;stroke-width:0.499017;stroke-dasharray:none"
        id="rect2"
        width="132.29167"
        height="52.916668"
        x="0"
        y="0" />
+    <rect
+       style="fill:#f2f2f2;fill-opacity:1;stroke-width:0.895545"
+       id="rect3"
+       width="132.29167"
+       height="11.773958"
+       x="2.7755576e-17"
+       y="-3.8327183e-08" />
   </g>
   <g
      id="layer1"
      transform="translate(-4.9999999,-48)"
      style="fill:url(#linearGradient2);fill-opacity:1">
     <rect
-       style="mix-blend-mode:normal;fill:#f8e5d3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.264583;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter32)"
+       style="mix-blend-mode:normal;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.256864;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter8)"
        id="rect1"
-       width="129.66507"
-       height="9.5469484"
-       x="6.3132844"
-       y="60.424416"
-       ry="4.7734742"
-       transform="matrix(1.000245,0,0,0.96704474,-0.01743333,1.9755173)" />
+       width="129.69684"
+       height="8.9958334"
+       x="6.2973976"
+       y="60.700001"
+       ry="4.4979167" />
   </g>
 </svg>

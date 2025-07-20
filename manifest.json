@@ -29,17 +29,17 @@
             "additional_backgrounds_tiling": [ "no-repeat", "no-repeat", "repeat"  ]
         },
         "colors": {
-            "frame": "rgb(250, 250, 250)",
+            "frame": "rgb(236, 236, 236)",
             "frame_inactive": "rgb(250, 250, 250)",
             "toolbar_field": "rgb(250, 250, 250, 98%)",
-            "toolbar_field_border": "rgb(249, 239, 230, 98%)",
+            "toolbar_field_border": "rgb(250, 250, 250, 98%)",
             "toolbar_text": "rgb(74, 74, 74)",
             "toolbar_field_text": "rgb(74, 74, 74)",
-            "toolbar_top_separator": "rgb(250, 250, 250)",
-            "toolbar_bottom_separator": "rgb(250, 250, 250)",
-            "tab_selected": "rgb(220, 220, 220)",
-            "tab_text": "rgb(39, 35, 20)",
-            "tab_line": "rgb(220, 220, 220)",
+            "toolbar_top_separator": "rgb(236, 236, 236)",
+            "toolbar_bottom_separator": "rgb(236, 236, 236)",
+            "tab_selected": "rgb(250, 250, 250)",
+            "tab_text": "rgb(74, 74, 74)",
+            "tab_line": "rgb(218, 218, 218)",
             "tab_background_text": "rgb(74, 74, 74)",
             "tab_background_text_inactive": "rgb(190, 190, 190)",
             "sidebar": "rgb(246, 246, 246)",
@@ -49,9 +49,9 @@
             "popup_text": "rgb(74, 74, 74)",
             "popup_highlight": "rgb(44, 146, 251)",
             "popup_border": "rgb(195, 192, 190)",
-            "button_background_hover": "rgb(255, 213, 178)",
-            "button_background_active": "rgb(255, 181, 135)",
-            "ntp_background": "rgb(250, 250, 250)"
+            "button_background_hover": "rgb(236, 236, 236)",
+            "button_background_active": "rgb(223, 223, 223)",
+            "ntp_background": "rgb(236, 236, 236)"
         }
     },
     "dark_theme": {
