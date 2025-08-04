@@ -4,8 +4,8 @@ Cupertino is a theme for the Mozilla Firefox browser designed to match the macOS
 
 [**Download for Firefox**](https://addons.mozilla.org/en-US/firefox/addon/cupertino-theme/) | [**Get previous version**](https://github.com/corbindavenport/cupertino/releases/tag/v1.0)
 
-![Screenshot in light mode](screenshot_light.png)
+![Screenshot in light mode](screen_light.png)
 
-![Screenshot in dark mode](screenshot_dark.png)
+![Screenshot in dark mode](screen_dark.png)
 
 The developers of this theme are not associated with Mozilla or Apple, inc.
