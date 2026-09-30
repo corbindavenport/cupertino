@@ -1,0 +1,9 @@
+{
+    "powershell.codeFormatting.alignPropertyValuePairs": false,
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#7543e3",
+        "titleBar.inactiveBackground": "#9778db",
+        "titleBar.activeForeground": "#FFF",
+        "titleBar.inactiveForeground": "#d6d6d6"
+    }
+}

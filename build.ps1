@@ -1,0 +1,102 @@
+#Requires -Version 7.0
+
+param (
+    [switch]$MakeZip
+)
+
+$LightTheme = @{
+    images = @{
+        additional_backgrounds = "light_frame_right.svg", "light_frame_left.svg", "light_frame_center.svg"
+    }
+    properties = @{
+        additional_backgrounds_alignment = "right top", "left top", "center top"
+        additional_backgrounds_tiling = "no-repeat", "no-repeat", "repeat"
+    }
+    colors = @{
+        frame = "rgb(236, 236, 236)"
+        frame_inactive = "rgb(250, 250, 250)"
+        toolbar_field = "rgb(250, 250, 250, 97%)"
+        toolbar_field_border = "rgb(250, 250, 250, 97%)"
+        toolbar_text = "rgb(74, 74, 74)"
+        toolbar_field_text = "rgb(74, 74, 74)"
+        toolbar_top_separator = "rgb(242, 242, 242)"
+        toolbar_bottom_separator = "rgb(236, 236, 236)"
+        tab_selected = "rgb(250, 250, 250)"
+        tab_text = "rgb(74, 74, 74)"
+        tab_line = "rgb(218, 218, 218)"
+        tab_background_text = "rgb(74, 74, 74)"
+        tab_background_text_inactive = "rgb(190, 190, 190)"
+        sidebar = "rgb(250, 250, 250)"
+        sidebar_text = "rgb(74, 74, 74)"
+        sidebar_border = "rgb(250, 250, 250)"
+        popup = "rgb(250, 250, 250, 97%)"
+        popup_text = "rgb(74, 74, 74)"
+        popup_highlight = "rgb(44, 146, 251)"
+        popup_border = "rgb(195, 192, 190)"
+        button_background_hover = "rgb(236, 236, 236)"
+        button_background_active = "rgb(223, 223, 223)"
+        ntp_background = "rgb(250, 250, 250)"
+    }
+}
+
+$DarkTheme = @{
+    images = @{
+        additional_backgrounds = [array[]]::new(0)
+    }
+    colors = @{
+        frame = "rgb(30, 30, 30)"
+        frame_inactive = "rgb(30, 30, 30)"
+        toolbar = "rgb(30, 30, 30)"
+        toolbar_field = "rgb(23, 23, 24, 97%)"
+        toolbar_field_border = "rgb(37, 37, 37)"
+        toolbar_text = "rgb(255, 255, 255)"
+        toolbar_field_text = "rgb(255, 255, 255)"
+        toolbar_top_separator = "rgb(30, 30, 30)"
+        toolbar_bottom_separator = "rgb(30, 30, 30)"
+        tab_selected = "rgb(57, 57, 57)"
+        tab_text = "rgb(255, 255, 255)"
+        tab_line = "rgb(30, 30, 30)"
+        tab_background_text = "rgb(234, 234, 234)"
+        tab_background_text_inactive = "rgb(234, 234, 234)"
+        sidebar = "rgb(23, 23, 24)"
+        sidebar_text = "rgb(255, 255, 255)"
+        sidebar_border = "rgb(30, 30, 30)"
+        popup = "rgb(37, 37, 37, 97%)"
+        popup_text = "rgb(255, 255, 255)"
+        popup_highlight = "rgb(44, 146, 251)"
+        popup_border = "rgb(91, 91, 91)"
+        button_background_hover = "rgb(48, 48, 48)"
+        button_background_active = "rgb(57, 57, 57)"
+        ntp_background = "rgb(38, 54, 57)"
+        ntp_card_background = "rgb(23, 23, 24)"
+        ntp_text = "rgb(255, 255, 255)"
+    }
+}
+
+$Manifest = @{
+    manifest_version = 2
+    version = "2.0"
+    name = "Cupertino: Unofficial macOS theme for Firefox"
+    short_name = "Cupertino"
+    author = "Corbin Davenport"
+    description = "A Firefox theme designed to match the macOS color scheme and design."
+    homepage_url = "https://github.com/corbindavenport/cupertino"
+    icons = @{
+        "32" = "icon_x32.png"
+        "64" = "icon_x64.png"
+        "128" = "icon_x128.png"
+        "256" = "icon_x256.png"
+    }
+    theme = $LightTheme
+    dark_theme = $DarkTheme
+}
+
+# Create Firefox build
+$null = New-Item -ItemType Directory -Force -Path "build/firefox/"
+ConvertTo-Json $Manifest -Depth 5 | Set-Content "build/firefox/manifest.json" -Encoding UTF8
+Copy-Item -Path "assets/*" -Destination "build/firefox/" -Recurse -Force
+
+# Create Firefox ZIP
+if ($MakeZip) {
+    Compress-Archive -Path "build/firefox/*" -DestinationPath "build/firefox.zip" -Force
+}
