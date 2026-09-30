@@ -4,74 +4,62 @@ param (
     [switch]$MakeZip
 )
 
-$LightTheme = @{
-    images = @{
-        additional_backgrounds = "light_frame_right.svg", "light_frame_left.svg", "light_frame_center.svg"
-    }
-    properties = @{
-        additional_backgrounds_alignment = "right top", "left top", "center top"
-        additional_backgrounds_tiling = "no-repeat", "no-repeat", "repeat"
-    }
-    colors = @{
-        frame = "rgb(236, 236, 236)"
-        frame_inactive = "rgb(250, 250, 250)"
-        toolbar_field = "rgb(250, 250, 250, 97%)"
-        toolbar_field_border = "rgb(250, 250, 250, 97%)"
-        toolbar_text = "rgb(74, 74, 74)"
-        toolbar_field_text = "rgb(74, 74, 74)"
-        toolbar_top_separator = "rgb(242, 242, 242)"
-        toolbar_bottom_separator = "rgb(236, 236, 236)"
-        tab_selected = "rgb(250, 250, 250)"
-        tab_text = "rgb(74, 74, 74)"
-        tab_line = "rgb(218, 218, 218)"
-        tab_background_text = "rgb(74, 74, 74)"
-        tab_background_text_inactive = "rgb(190, 190, 190)"
-        sidebar = "rgb(250, 250, 250)"
-        sidebar_text = "rgb(74, 74, 74)"
-        sidebar_border = "rgb(250, 250, 250)"
-        popup = "rgb(250, 250, 250, 97%)"
-        popup_text = "rgb(74, 74, 74)"
-        popup_highlight = "rgb(44, 146, 251)"
-        popup_border = "rgb(195, 192, 190)"
-        button_background_hover = "rgb(236, 236, 236)"
-        button_background_active = "rgb(223, 223, 223)"
-        ntp_background = "rgb(250, 250, 250)"
+# Color palettes
+
+$LightColors = @{
+    primary = "rgb(236, 236, 236)"
+    secondary = "rgb(242, 242, 242)"
+    tertiary = "rgb(250, 250, 250)"
+    translucent = "rgb(250, 250, 250, 97%)"
+    border = "rgb(218, 218, 218)"
+    text = "rgb(74, 74, 74)"
+    text_inactive = "rgb(190, 190, 190)"
+    active = "rgb(44, 146, 251)"
+}
+
+$DarkColors = @{
+    primary = "rgb(30, 30, 30)"
+    secondary = "rgb(30, 30, 30)"
+    tertiary = "rgb(23, 23, 24)"
+    translucent = "rgb(23, 23, 24, 97%)"
+    border = "rgb(30, 30, 30)"
+    text = "rgb(255, 255, 255)"
+    text_inactive = "rgb(234, 234, 234)"
+    active = "rgb(44, 146, 251)"
+}
+
+# Function to map color values to JSON keys
+
+function Write-Colors {
+    param ($InputColors)
+    Write-Output @{
+        frame = $InputColors.primary
+        frame_inactive = $InputColors.primary
+        toolbar_field = $InputColors.translucent
+        toolbar_field_border = $InputColors.translucent
+        toolbar_text = $InputColors.text
+        toolbar_field_text = $InputColors.text
+        toolbar_top_separator = $InputColors.secondary
+        toolbar_bottom_separator = $InputColors.primary
+        tab_selected = $InputColors.tertiary
+        tab_text = $InputColors.text
+        tab_line = $InputColors.border
+        tab_background_text = $InputColors.text
+        tab_background_text_inactive = $InputColors.text_inactive
+        sidebar = $InputColors.tertiary
+        sidebar_text = $InputColors.text
+        sidebar_border = $InputColors.tertiary
+        popup = $InputColors.translucent
+        popup_text = $InputColors.text
+        popup_highlight = $InputColors.active
+        popup_border = $InputColors.translucent
+        button_background_hover = $InputColors.secondary
+        button_background_active = $InputColors.primary
+        ntp_background = $InputColors.tertiary
     }
 }
 
-$DarkTheme = @{
-    images = @{
-        additional_backgrounds = [array[]]::new(0)
-    }
-    colors = @{
-        frame = "rgb(30, 30, 30)"
-        frame_inactive = "rgb(30, 30, 30)"
-        toolbar = "rgb(30, 30, 30)"
-        toolbar_field = "rgb(23, 23, 24, 97%)"
-        toolbar_field_border = "rgb(37, 37, 37)"
-        toolbar_text = "rgb(255, 255, 255)"
-        toolbar_field_text = "rgb(255, 255, 255)"
-        toolbar_top_separator = "rgb(30, 30, 30)"
-        toolbar_bottom_separator = "rgb(30, 30, 30)"
-        tab_selected = "rgb(57, 57, 57)"
-        tab_text = "rgb(255, 255, 255)"
-        tab_line = "rgb(30, 30, 30)"
-        tab_background_text = "rgb(234, 234, 234)"
-        tab_background_text_inactive = "rgb(234, 234, 234)"
-        sidebar = "rgb(23, 23, 24)"
-        sidebar_text = "rgb(255, 255, 255)"
-        sidebar_border = "rgb(30, 30, 30)"
-        popup = "rgb(37, 37, 37, 97%)"
-        popup_text = "rgb(255, 255, 255)"
-        popup_highlight = "rgb(44, 146, 251)"
-        popup_border = "rgb(91, 91, 91)"
-        button_background_hover = "rgb(48, 48, 48)"
-        button_background_active = "rgb(57, 57, 57)"
-        ntp_background = "rgb(38, 54, 57)"
-        ntp_card_background = "rgb(23, 23, 24)"
-        ntp_text = "rgb(255, 255, 255)"
-    }
-}
+# Manifest file containing both themes and metadata
 
 $Manifest = @{
     manifest_version = 2
@@ -87,11 +75,27 @@ $Manifest = @{
         "128" = "icon_x128.png"
         "256" = "icon_x256.png"
     }
-    theme = $LightTheme
-    dark_theme = $DarkTheme
+    theme = @{
+        images = @{
+            additional_backgrounds = "light_frame_right.svg", "light_frame_left.svg", "light_frame_center.svg"
+        }
+        properties = @{
+            additional_backgrounds_alignment = "right top", "left top", "center top"
+            additional_backgrounds_tiling = "no-repeat", "no-repeat", "repeat"
+        }
+        colors = Write-Colors $LightColors
+    }
+    dark_theme = @{
+        images = @{
+            # This is an empty array so the light theme backgrounds aren't used
+            additional_backgrounds = [array[]]::new(0)
+        }
+        colors = Write-Colors $DarkColors
+    }
 }
 
 # Create Firefox build
+
 $FirefoxPath = Join-Path -Path "build" -ChildPath "firefox"
 $null = New-Item -ItemType Directory -Force -Path $FirefoxPath
 $FirefoxJson = Join-Path -Path $FirefoxPath -ChildPath "manifest.json"
@@ -99,6 +103,7 @@ ConvertTo-Json $Manifest -Depth 5 | Set-Content $FirefoxJson -Encoding UTF8
 Copy-Item -Path $(Join-Path -Path "assets" -ChildPath "*") -Destination $FirefoxPath -Recurse -Force
 
 # Create Firefox ZIP
+
 if ($MakeZip) {
     $FirefoxFiles = Join-Path -Path $FirefoxPath -ChildPath "*"
     $FirefoxZip = Join-Path -Path "build" -ChildPath "firefox.zip"
