@@ -92,11 +92,15 @@ $Manifest = @{
 }
 
 # Create Firefox build
-$null = New-Item -ItemType Directory -Force -Path "build/firefox/"
-ConvertTo-Json $Manifest -Depth 5 | Set-Content "build/firefox/manifest.json" -Encoding UTF8
-Copy-Item -Path "assets/*" -Destination "build/firefox/" -Recurse -Force
+$FirefoxPath = Join-Path -Path "build" -ChildPath "firefox"
+$null = New-Item -ItemType Directory -Force -Path $FirefoxPath
+$FirefoxJson = Join-Path -Path $FirefoxPath -ChildPath "manifest.json"
+ConvertTo-Json $Manifest -Depth 5 | Set-Content $FirefoxJson -Encoding UTF8
+Copy-Item -Path $(Join-Path -Path "assets" -ChildPath "*") -Destination $FirefoxPath -Recurse -Force
 
 # Create Firefox ZIP
 if ($MakeZip) {
-    Compress-Archive -Path "build/firefox/*" -DestinationPath "build/firefox.zip" -Force
+    $FirefoxFiles = Join-Path -Path $FirefoxPath -ChildPath "*"
+    $FirefoxZip = Join-Path -Path "build" -ChildPath "firefox.zip"
+    Compress-Archive -Path $FirefoxFiles -DestinationPath $FirefoxZip -Force
 }
